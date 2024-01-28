@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<!DOCTYPE html>
+<html>
+
+<head th:insert="landing/head"></head>
+<script type="text/javascript" th:src="@{/scripts/home.js}"></script>
+
+
+<body>
+<div th:insert="landing/menu-bar"></div>
+
+<section class="zona1 readable">
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h2>Conseguir Entradas nunca fué tan fácil</h2>    <br/>    <br/>
+    <button class="ep-button" th:onclick="javascript:buttonTest();" > Comienza ahora !</button>
+
+
+
+</section>
+<section class="zona2 readable">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h3>
+        paso 1 .- Elige tu Evento
+    </h3>
+    <br/>
+    <br/>
+
+    <h3>
+        paso 2 .- Separa tu entrada
+    </h3>
+    <br/>
+    <br/>
+    <h3>
+        paso 3 .- Escanea QR para entrar y listo!
+    </h3>
+    <br/>
+    <br/>
+
+</section>
+<div th:insert="layout/footer :: footer"></div>
+</body>
+</html>
+
+
