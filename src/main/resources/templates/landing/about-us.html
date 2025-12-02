@@ -1,1 +1,201 @@
-<h1>about-us</h1>
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="landing/head"></head>
+<script type="text/javascript" th:src="@{/scripts/home.js}"></script>
+
+<body>
+<div th:insert="landing/menu-bar"></div>
+
+<section class="zona1 readable">
+    <br/>
+    <h1>Transformamos Eventos en Experiencias</h1>
+    <br/>
+
+    <div class="mission-statement">
+        <p class="lead-text">
+            En <strong>EventFlow</strong>, creemos que cada evento merece ser inolvidable.
+            Nuestra misión es simplificar la gestión de eventos para que organizadores
+            y asistentes se enfoquen en lo que realmente importa: <em>conectar, aprender y celebrar</em>.
+        </p>
+    </div>
+
+    <div class="stats-container">
+        <div class="stat-item">
+            <h2>500+</h2>
+            <p>Eventos gestionados</p>
+        </div>
+        <div class="stat-item">
+            <h2>50K+</h2>
+            <p>Asistentes registrados</p>
+        </div>
+        <div class="stat-item">
+            <h2>99.8%</h2>
+            <p>Satisfacción en check-in</p>
+        </div>
+    </div>
+
+    <br/>
+    <button class="ep-button" th:onclick="javascript:buttonTest();">
+        ¡Crea tu primer evento!
+    </button>
+    <br/>
+    <br/>
+</section>
+
+<section class="zona2 readable">
+    <br/>
+    <h3 class="section-title">Tu Evento, en 3 Pasos Simples</h3>
+    <br/>
+
+    <div class="steps-container">
+        <div class="step">
+            <div class="step-icon">🎯</div>
+            <h3>1. Crea tu Evento</h3>
+            <p>
+                Diseña tu evento en minutos. Establece fecha, capacidad,
+                y personaliza la experiencia para tus asistentes.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-icon">📧</div>
+            <h3>2. Comparte el Registro</h3>
+            <p>
+                Envía invitaciones únicas con QR codes automáticos.
+                Los asistentes se registran en segundos desde cualquier dispositivo.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-icon">📱</div>
+            <h3>3. Check-in Sin Estrés</h3>
+            <p>
+                Escanea, valida y ¡listo! Entrada rápida sin filas.
+                Estadísticas en tiempo real para el organizador.
+            </p>
+        </div>
+    </div>
+    <br/>
+    <br/>
+</section>
+
+<!-- Nuestro Equipo -->
+<section class="zona3 readable">
+    <br/>
+    <h3>La Tecnología Detrás de la Magia</h3>
+    <br/>
+
+    <div class="tech-features">
+        <div class="feature">
+            <h4>🛡️ Seguridad de Primer Nivel</h4>
+            <p>QR codes únicos y encriptados para prevenir fraudes.</p>
+        </div>
+        <div class="feature">
+            <h4>📊 Dashboard en Tiempo Real</h4>
+            <p>Monitorea asistencia y genera reportes al instante.</p>
+        </div>
+        <div class="feature">
+            <h4>📱 Multiplataforma</h4>
+            <p>Funciona en web y móvil sin necesidad de apps complejas.</p>
+        </div>
+        <div class="feature">
+            <h4>🔌 Integraciones Flexibles</h4>
+            <p>Conecta con herramientas que ya usas.</p>
+        </div>
+    </div>
+</section>
+
+<div th:insert="layout/footer :: footer"></div>
+
+<style>
+    .mission-statement {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.2em;
+        line-height: 1.8;
+    }
+
+    .stats-container {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        text-align: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1.5rem 2rem;
+        border-radius: 15px;
+        min-width: 150px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .stat-item h2 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    .steps-container {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .step {
+        flex: 1;
+        min-width: 250px;
+        max-width: 300px;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .step:hover {
+        transform: translateY(-5px);
+    }
+
+    .step-icon {
+        font-size: 3em;
+        margin-bottom: 1rem;
+    }
+
+    .tech-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .feature {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 10px;
+        border-left: 4px solid #667eea;
+    }
+
+    @media (max-width: 768px) {
+        .stats-container {
+            gap: 1rem;
+        }
+
+        .stat-item {
+            min-width: 120px;
+            padding: 1rem;
+        }
+
+        .steps-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+</body>
+</html>

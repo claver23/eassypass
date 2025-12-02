@@ -4,8 +4,7 @@ import com.etlions.easypass.dto.EventDto;
 
 import java.util.List;
 
-public interface FindEventsNearUseCase {
+public interface FindEventsNearLikeUseCase {
 
-    List<EventDto> FindEventsNear();
-
+    List<EventDto> FindEventsNearLike(String textLike);
 }
